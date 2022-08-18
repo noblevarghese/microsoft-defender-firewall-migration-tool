@@ -20,7 +20,7 @@ if (-not(Test-Path ".\defender-firewall-migration.zip")) {
     Get-ChildItem ".\defender-firewall-migration.zip" -Recurse -Force | Unblock-File
 
     #Unzip the files into the current direectory
-    Expand-Archive -LiteralPath ".\defender-firewall-migration.zip" -DestinationPath ".\"
+    Expand-Archive -LiteralPath ".\defender-firewall-migration.zip" -DestinationPath ".\" -Force
 }
 #----------------------------------------------------------------------------------------------
 
