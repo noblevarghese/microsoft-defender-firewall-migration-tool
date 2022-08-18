@@ -1,4 +1,4 @@
-# windows-Defender-firewall-migration-tool
+# Windows-Defender-firewall-migration-tool
 Repository hosting toolset for migrating Windows Defender Firewall rules from Group Policy &amp; Local Store to Microsoft Endpoint Manager aka Microsoft Intune
 
 ### How to use the tool?
