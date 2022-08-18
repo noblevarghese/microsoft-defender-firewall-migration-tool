@@ -10,3 +10,11 @@ To migrate Windows Defender Firewall rules to Endpoint Manager, you need to run 
 > * Make sure to set the `Redirect URI` for Web as `https://localhost`.
 > * Enable ‘Access tokens’ under Implicit grant and hybrid flows.
 > * Toggle ‘Enable the following mobile & desktop flows’ to yes under allow public client flows. Make a note of the `Application (Client) ID` and `Directory (Tenant) ID`.
+
+* In the script repository, add the `Application (Client) ID` and `Directory (tenant) ID` of the application you created earlier as comma-separated values into the `client.config` file.
+
+#### Switches supported by the tool
+Use the following switches (parameters) to modify the tool’s default behavior.
+
+* **IncludeLocalRules** — Use this switch to include all locally created/default Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
+* **IncludedDisabledRules** — e this switch to include all enabled and disabled Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
