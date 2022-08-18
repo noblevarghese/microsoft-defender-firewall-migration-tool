@@ -18,3 +18,19 @@ Use the following switches (parameters) to modify the tool’s default behavior.
 
 * **IncludeLocalRules** — Use this switch to include all locally created/default Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
 * **IncludedDisabledRules** — e this switch to include all enabled and disabled Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
+
+#### Required Permissions
+* An Azure AD App with Delegated Permissions to Graph API with **DeviceManagementConfiguration.ReadWrite.All**
+* Users assigned the Intune roles for Endpoint Security Manager, Intune Service Admin, or Global Admin can migrate Windows Firewall rules to Endpoint security policies.
+
+#### How to run the tool?
+To run the tool:
+
+* Sign in to the reference machine with local administrator privileges.
+* Download the repo as a zip file and extract them to a location of your choice
+* The zip file contains the script file `Export-FirewallRules.ps1` and the `client.config` file. Unblock the `Export-FirewallRules.ps1` and the `client.config` file if they are blocked by Windows
+* Add the `Application (Client) ID` and `Directory (tenant) ID` of the application you created earlier as comma-separated values into the `client.config` file.
+* Execute the `Export-FirewallRules.ps1` script on the machine with required switches.
+
+#### Example
+`Export-FirewallRules.ps1 -includeLocalRules`
