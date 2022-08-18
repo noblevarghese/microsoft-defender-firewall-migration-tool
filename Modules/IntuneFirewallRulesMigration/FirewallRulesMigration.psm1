@@ -51,7 +51,7 @@ ForEach ($import in @($Public)) {
 ForEach ($cmdlet in $manifestData["CmdletsToExport"]) {
     Export-ModuleMember -Function $cmdlet
 }
-$client_Details = Import-Csv $PSScriptRoot\client.config
+$client_Details = Import-Csv .\client.config
 if (Get-Module Microsoft.Graph.Intune -ListAvailable) {
     try {
         $token = Get-MsalToken -DeviceCode -ClientId $client_Details.client_id -TenantId $client_Details.tenant_id -RedirectUri "https://localhost"
